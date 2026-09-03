@@ -27,6 +27,9 @@
 </script>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://cdn.tailwindcss.com" rel="dns-prefetch"/>
+<link href="https://unpkg.com" rel="dns-prefetch"/>
+<link href="https://formspree.io" rel="dns-prefetch"/>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..24,400..600,0..1,0&amp;display=swap" rel="stylesheet"/>
 <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" integrity="sha384-/rJKQnzOkEo+daG0jMjU1IwwY9unxt1NBw3Ef2fmOJ3PW/TfAg2KXVoWwMZQZtw9" crossorigin="anonymous"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -139,12 +142,20 @@
 <span class="text-xs sm:text-sm font-medium text-brand-black">Kernel Telemetry: Active</span>
 </div>
 </div>
-<!-- Center Ethereal Glowing Orbs -->
-<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-<div class="w-[320px] h-[320px] rounded-full bg-gradient-to-tr from-rose-400/50 to-orange-300/45 blur-[80px] absolute orb-float-a"></div>
-<div class="w-[420px] h-[420px] rounded-full bg-gradient-to-tr from-indigo-500/40 via-purple-400/45 to-sky-400/40 blur-[90px] absolute orb-float-b"></div>
-<div class="w-[280px] h-[280px] rounded-full bg-gradient-to-tr from-emerald-400/40 to-teal-300/40 blur-[75px] absolute orb-float-c"></div>
-<div class="w-[340px] h-[340px] rounded-full bg-gradient-to-tr from-sky-400/45 to-blue-500/40 blur-[85px] absolute orb-float-d"></div>
+<!-- Center Ethereal Glowing Orbs — blur on static child, motion on compositor wrapper -->
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none orb-stage">
+<div class="w-[320px] h-[320px] absolute orb-float-a">
+<div class="orb-blur bg-gradient-to-tr from-rose-400/50 to-orange-300/45 blur-[80px]"></div>
+</div>
+<div class="w-[420px] h-[420px] absolute orb-float-b">
+<div class="orb-blur bg-gradient-to-tr from-indigo-500/40 via-purple-400/45 to-sky-400/40 blur-[90px]"></div>
+</div>
+<div class="w-[280px] h-[280px] absolute orb-float-c">
+<div class="orb-blur bg-gradient-to-tr from-emerald-400/40 to-teal-300/40 blur-[75px]"></div>
+</div>
+<div class="w-[340px] h-[340px] absolute orb-float-d">
+<div class="orb-blur bg-gradient-to-tr from-sky-400/45 to-blue-500/40 blur-[85px]"></div>
+</div>
 </div>
 <!-- Center Glassmorphic Synthesis Control Card -->
 <div class="z-10 self-center my-auto py-8 w-full max-w-[480px] px-1">
@@ -915,6 +926,6 @@
 </div>
 </div>
 </footer>
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js" integrity="sha384-n1AULnKdMJlK1oQCLNDL9qZsDgXtH6jRYFCpBtWFc+a9Yve0KSoMn575rk755NJZ" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer integrity="sha384-n1AULnKdMJlK1oQCLNDL9qZsDgXtH6jRYFCpBtWFc+a9Yve0KSoMn575rk755NJZ" crossorigin="anonymous"></script>
 <script src="assets/js/main.js" defer></script>
 </body></html>

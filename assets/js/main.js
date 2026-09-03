@@ -1,42 +1,97 @@
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xoeqwyoj';
 
+/* AOS: same duration/once/offset — disable mutation observer to cut scroll overhead */
 if (typeof AOS !== 'undefined') {
-  AOS.init({ duration: 700, once: true, offset: 80 });
+  AOS.init({
+    duration: 700,
+    once: true,
+    offset: 80,
+    disableMutationObserver: true,
+    throttleDelay: 99,
+    debounceDelay: 50
+  });
 }
 
-/* Stat counter animation */
+/* Stat counter — same 1.2s cubic ease-out; skip redundant text writes */
 function animateStat(el) {
   const target = parseFloat(el.dataset.target);
   const decimals = parseInt(el.dataset.decimals || '0', 10);
   const duration = 1200;
   const start = performance.now();
+  let last = '';
   function frame(now) {
     const t = Math.min((now - start) / duration, 1);
     const eased = 1 - Math.pow(1 - t, 3);
     const value = target * eased;
-    el.textContent = decimals > 0 ? value.toFixed(decimals) : String(Math.round(value));
+    const next = decimals > 0 ? value.toFixed(decimals) : String(Math.round(value));
+    if (next !== last) {
+      el.textContent = next;
+      last = next;
+    }
     if (t < 1) requestAnimationFrame(frame);
   }
   requestAnimationFrame(frame);
 }
 
-const statObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (!entry.isIntersecting) return;
-    const el = entry.target;
-    if (el.dataset.counted) return;
-    el.dataset.counted = '1';
-    animateStat(el);
-    statObserver.unobserve(el);
-  });
-}, { threshold: 0.4 });
+const statNodes = document.querySelectorAll('.stat-num');
+if (statNodes.length) {
+  const statObserver = new IntersectionObserver((entries) => {
+    for (let i = 0; i < entries.length; i++) {
+      const entry = entries[i];
+      if (!entry.isIntersecting) continue;
+      const el = entry.target;
+      if (el.dataset.counted) continue;
+      el.dataset.counted = '1';
+      animateStat(el);
+      statObserver.unobserve(el);
+    }
+  }, { threshold: 0.4 });
+  for (let i = 0; i < statNodes.length; i++) statObserver.observe(statNodes[i]);
+}
 
-document.querySelectorAll('.stat-num').forEach((el) => statObserver.observe(el));
+/*
+ * Pause continuous CSS animations when off-screen or tab hidden.
+ * Same keyframes/duration — only animation-play-state toggles.
+ */
+(function pauseOffscreenAnimations() {
+  const animated = document.querySelectorAll('.orb-float-a, .orb-float-b, .orb-float-c, .orb-float-d, .animate-marquee');
+  if (!animated.length) return;
+
+  const visible = new WeakSet();
+
+  const io = new IntersectionObserver((entries) => {
+    for (let i = 0; i < entries.length; i++) {
+      const entry = entries[i];
+      if (entry.isIntersecting) {
+        visible.add(entry.target);
+        if (!document.hidden) entry.target.classList.remove('is-paused');
+      } else {
+        visible.delete(entry.target);
+        entry.target.classList.add('is-paused');
+      }
+    }
+  }, { rootMargin: '50px 0px', threshold: 0 });
+
+  for (let i = 0; i < animated.length; i++) {
+    animated[i].classList.add('is-paused');
+    io.observe(animated[i]);
+  }
+
+  document.addEventListener('visibilitychange', () => {
+    for (let i = 0; i < animated.length; i++) {
+      const el = animated[i];
+      if (document.hidden || !visible.has(el)) el.classList.add('is-paused');
+      else el.classList.remove('is-paused');
+    }
+  }, { passive: true });
+})();
 
 /* Form validation helpers */
 function clearErrors(form) {
-  form.querySelectorAll('.field-error').forEach((el) => el.remove());
-  form.querySelectorAll('.border-rose-400').forEach((el) => el.classList.remove('border-rose-400'));
+  const errs = form.querySelectorAll('.field-error');
+  for (let i = 0; i < errs.length; i++) errs[i].remove();
+  const bad = form.querySelectorAll('.border-rose-400');
+  for (let i = 0; i < bad.length; i++) bad[i].classList.remove('border-rose-400');
 }
 
 function showFieldError(input, msg) {
@@ -84,9 +139,7 @@ function validateForm(form) {
   return valid;
 }
 
-/* Form submission */
 async function submitDemoForm(form) {
-  /* Honeypot check — if bot filled the hidden _gotcha field, silently bail */
   const honeypot = form.querySelector('[name="_gotcha"]');
   if (honeypot && honeypot.value) return;
 

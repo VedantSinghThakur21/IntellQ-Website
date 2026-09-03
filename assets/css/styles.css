@@ -16,17 +16,20 @@ body {
 }
 
 @keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
 }
 
 .animate-marquee {
   display: flex;
   animation: marquee 35s linear infinite;
   width: 200%;
+  will-change: transform;
+  backface-visibility: hidden;
 }
 
-.animate-marquee:hover {
+.animate-marquee:hover,
+.animate-marquee.is-paused {
   animation-play-state: paused;
 }
 
@@ -35,26 +38,42 @@ body {
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(0, 0, 0, 0.06);
+  transform: translateZ(0);
+}
+
+/* Hero orb layer: animate wrapper (compositor), keep blur on static child */
+.orb-stage {
+  contain: layout paint;
+  isolation: isolate;
+  transform: translateZ(0);
 }
 
 @keyframes float-orb-a {
-  0%, 100% { transform: translate(-8rem, -0.5rem) scale(1); }
-  50% { transform: translate(-7rem, -1.5rem) scale(1.04); }
+  0%, 100% { transform: translate3d(-8rem, -0.5rem, 0) scale(1); }
+  50% { transform: translate3d(-7rem, -1.5rem, 0) scale(1.04); }
 }
 
 @keyframes float-orb-b {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(0.75rem, -1.25rem) scale(1.03); }
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(0.75rem, -1.25rem, 0) scale(1.03); }
 }
 
 @keyframes float-orb-c {
-  0%, 100% { transform: translate(9rem, 4rem) scale(1); }
-  50% { transform: translate(8rem, 5rem) scale(1.05); }
+  0%, 100% { transform: translate3d(9rem, 4rem, 0) scale(1); }
+  50% { transform: translate3d(8rem, 5rem, 0) scale(1.05); }
 }
 
 @keyframes float-orb-d {
-  0%, 100% { transform: translate(16rem, -3rem) scale(1); }
-  50% { transform: translate(15rem, -2rem) scale(1.03); }
+  0%, 100% { transform: translate3d(16rem, -3rem, 0) scale(1); }
+  50% { transform: translate3d(15rem, -2rem, 0) scale(1.03); }
+}
+
+.orb-float-a,
+.orb-float-b,
+.orb-float-c,
+.orb-float-d {
+  will-change: transform;
+  backface-visibility: hidden;
 }
 
 .orb-float-a { animation: float-orb-a 8s ease-in-out infinite; }
@@ -62,12 +81,26 @@ body {
 .orb-float-c { animation: float-orb-c 12s ease-in-out infinite; }
 .orb-float-d { animation: float-orb-d 14s ease-in-out infinite; }
 
+.orb-float-a.is-paused,
+.orb-float-b.is-paused,
+.orb-float-c.is-paused,
+.orb-float-d.is-paused {
+  animation-play-state: paused;
+}
+
+.orb-blur {
+  width: 100%;
+  height: 100%;
+  border-radius: 9999px;
+  transform: translateZ(0);
+}
+
 .card-lift {
   transition: transform 200ms ease, box-shadow 200ms ease;
 }
 
 .card-lift:hover {
-  transform: translateY(-4px);
+  transform: translate3d(0, -4px, 0);
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
 }
 
