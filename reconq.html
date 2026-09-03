@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<!-- TODO: header, footer, and contact form are duplicated across index.html and reconq.html — consider extracting to a build step or templating approach if more pages are added. -->
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ReconQ — Autonomous Finance Operations | IntellQ</title>
+<meta name="description" content="ReconQ by IntellQ: Autonomous cash application and ledger matching. 85%+ STP match rate, 1-day continuous close, full decision lineage."/>
+<link rel="canonical" href="https://intellq.ai/reconq.html"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="ReconQ — Autonomous Finance Operations"/>
+<meta property="og:description" content="Eliminate month-end close chaos with agentic AI cash application and matching."/>
+<meta property="og:url" content="https://intellq.ai/reconq.html"/>
+<meta property="og:image" content="https://intellq.ai/assets/images/og-image.png"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..24,400..600,0..1,0&amp;display=swap" rel="stylesheet"/>
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" integrity="sha384-/rJKQnzOkEo+daG0jMjU1IwwY9unxt1NBw3Ef2fmOJ3PW/TfAg2KXVoWwMZQZtw9" crossorigin="anonymous"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          surface: "#F7F7F5",
+          "surface-card": "#FFFFFF",
+          "surface-panel": "#F3F2EF",
+          "surface-border": "#E7E7E4",
+          "brand-black": "#09090B",
+          "brand-muted": "#71717A",
+          "brand-secondary": "#52525B",
+          "brand-accent": "#4648D4",
+          "pastel-purple": "#EDE9FE",
+          "pastel-mint": "#DCFCE7",
+          "pastel-amber": "#FEF3C7",
+          "pastel-cyan": "#E0F2FE"
+        },
+        fontFamily: {
+          sans: ["Geist", "Inter", "sans-serif"],
+          mono: ['"IBM Plex Mono"', "monospace"]
+        },
+        borderRadius: {
+          '2xl': '1.25rem',
+          '3xl': '1.75rem',
+          '4xl': '2.25rem'
+        }
+      }
+    }
+  }
+</script>
+<link rel="stylesheet" href="assets/css/styles.css"/>
+</head>
+<body class="antialiased min-h-screen flex flex-col selection:bg-black selection:text-white">
+<header class="fixed top-0 left-0 right-0 z-50 bg-[#F7F7F5]/80 backdrop-blur-md border-b border-black/[0.06] transition-all">
+<div class="max-w-[1280px] mx-auto px-4 sm:px-8 h-[72px] flex items-center justify-between">
+<div class="flex items-center gap-10">
+<a class="flex items-center gap-2 group" href="index.html">
+<span class="font-bold text-[21px] tracking-tight text-brand-black">IntellQ</span>
+<span class="w-1.5 h-1.5 rounded-full bg-brand-black group-hover:bg-indigo-600 transition-colors"></span>
+</a>
+<div class="hidden sm:flex items-center pl-3 border-l border-black/10">
+<span class="font-mono text-[10px] tracking-[0.18em] text-brand-muted uppercase">by AvariQ</span>
+</div>
+<nav class="hidden md:flex items-center gap-7 text-sm font-medium tracking-tight text-brand-muted">
+<a class="hover:text-brand-black transition-colors" href="index.html#platform">Platform</a>
+<a class="hover:text-brand-black transition-colors" href="index.html#modules">Modules</a>
+<a class="text-brand-black transition-colors" href="reconq.html">ReconQ</a>
+<a class="hover:text-brand-black transition-colors" href="index.html#roadmap">Roadmap</a>
+</nav>
+</div>
+<div class="flex items-center gap-3">
+<a class="hidden sm:inline-flex text-sm font-medium text-brand-secondary hover:text-brand-black px-3 py-2 transition-colors" href="#pilot">Sign in</a>
+<a class="rounded-full bg-brand-black text-white px-5 py-2.5 text-sm font-medium hover:bg-black/85 transition-all shadow-sm active:scale-98" href="#pilot">
+        Request Access
+      </a>
+</div>
+</div>
+</header>
+
+<main class="flex-grow pt-[124px]">
+<!-- HERO -->
+<section class="max-w-[1280px] mx-auto px-4 sm:px-8 pt-6 sm:pt-8 pb-16 sm:pb-24">
+<div class="mb-6 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/[0.04] border border-black/[0.06] text-xs font-medium text-brand-secondary" data-aos="fade-up">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+<span>IntellQ Module · MOD-04</span>
+<span class="text-black/25">/</span>
+<span class="font-mono text-[11px] text-brand-black">Phase 1</span>
+</div>
+<h1 class="font-semibold text-4xl sm:text-5xl lg:text-6xl text-brand-black tracking-tight leading-[1.08] max-w-3xl mb-5" data-aos="fade-up">
+      ReconQ — Autonomous Finance Operations
+    </h1>
+<p class="text-base sm:text-xl text-brand-muted leading-relaxed max-w-2xl mb-10" data-aos="fade-up" data-aos-delay="100">
+      Eliminate Month-End Close Chaos with Agentic AI Cash Application &amp; Matching
+    </p>
+<div class="flex flex-wrap gap-3" data-aos="fade-up" data-aos-delay="200">
+<span class="inline-flex items-center gap-2 rounded-full bg-white border border-black/[0.08] px-4 py-2 text-sm font-medium text-brand-black shadow-sm">
+<span class="font-mono text-emerald-600 font-semibold">85%+</span> STP Match Rate
+      </span>
+<span class="inline-flex items-center gap-2 rounded-full bg-white border border-black/[0.08] px-4 py-2 text-sm font-medium text-brand-black shadow-sm">
+<span class="font-mono text-emerald-600 font-semibold">100%</span> Audit Rigour
+      </span>
+<span class="inline-flex items-center gap-2 rounded-full bg-white border border-black/[0.08] px-4 py-2 text-sm font-medium text-brand-black shadow-sm">
+<span class="font-mono text-emerald-600 font-semibold">2-Week</span> Deployment
+      </span>
+</div>
+</section>
+
+<!-- PROBLEM VS SOLUTION -->
+<section class="max-w-[1280px] mx-auto px-4 sm:px-8 mb-28">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+<div class="rounded-3xl p-6 sm:p-8 border border-rose-200 bg-rose-50/60" data-aos="fade-up" data-aos-delay="100">
+<div class="flex items-center gap-2 mb-5">
+<span class="w-2 h-2 rounded-full bg-rose-500"></span>
+<span class="font-mono text-xs uppercase tracking-widest text-rose-700 font-semibold">Traditional Finance Pain</span>
+</div>
+<ul class="space-y-4">
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-rose-500 text-xl shrink-0">close</span>
+<div>
+<p class="text-sm font-semibold text-brand-black">5–10 Days Close Cycle</p>
+<p class="text-xs text-brand-muted mt-0.5">Manual matching stretches month-end into a multi-day fire drill.</p>
+</div>
+</li>
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-rose-500 text-xl shrink-0">close</span>
+<div>
+<p class="text-sm font-semibold text-brand-black">Unstructured Narrations</p>
+<p class="text-xs text-brand-muted mt-0.5">Payment notes break legacy rule engines and leave cash unapplied.</p>
+</div>
+</li>
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-rose-500 text-xl shrink-0">close</span>
+<div>
+<p class="text-sm font-semibold text-brand-black">GST/TDS Deduction Nightmare</p>
+<p class="text-xs text-brand-muted mt-0.5">Partial deductions create unapplied cash backlogs and exception queues.</p>
+</div>
+</li>
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-rose-500 text-xl shrink-0">close</span>
+<div>
+<p class="text-sm font-semibold text-brand-black">Compliance Risk</p>
+<p class="text-xs text-brand-muted mt-0.5">Unauditable spreadsheet overrides with no decision lineage.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="rounded-3xl p-6 sm:p-8 border border-emerald-200 bg-emerald-50/60" data-aos="fade-up" data-aos-delay="200">
+<div class="flex items-center gap-2 mb-5">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+<span class="font-mono text-xs uppercase tracking-widest text-emerald-700 font-semibold">The ReconQ Advantage</span>
+</div>
+<ul class="space-y-4">
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-emerald-600 text-xl shrink-0">check_circle</span>
+<div>
+<p class="text-sm font-semibold text-brand-black">1-Day Continuous Close</p>
+<p class="text-xs text-brand-muted mt-0.5">80% faster — close runs continuously instead of as a month-end event.</p>
+</div>
+</li>
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-emerald-600 text-xl shrink-0">check_circle</span>
+<div>
+<p class="text-sm font-semibold text-brand-black">Agentic Pattern Learning</p>
+<p class="text-xs text-brand-muted mt-0.5">Learns customer payment habits and GSTINs over time.</p>
+</div>
+</li>
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-emerald-600 text-xl shrink-0">check_circle</span>
+<div>
+<p class="text-sm font-semibold text-brand-black">Double-Tiered Matching Engine</p>
+<p class="text-xs text-brand-muted mt-0.5">Exact reference matching + AI fuzzy disposition gate.</p>
+</div>
+</li>
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-emerald-600 text-xl shrink-0">check_circle</span>
+<div>
+<p class="text-sm font-semibold text-brand-black">Full Decision Lineage</p>
+<p class="text-xs text-brand-muted mt-0.5">Every match carries confidence scores and an auditable trail.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- ARCHITECTURE -->
+<section class="max-w-[1280px] mx-auto px-4 sm:px-8 mb-28">
+<div class="flex items-center gap-4 mb-6">
+<span class="rounded-full px-3.5 py-1 text-xs font-semibold bg-black/[0.04] text-brand-black border border-black/[0.06]">Architecture</span>
+<div class="h-px bg-black/[0.08] flex-grow"></div>
+</div>
+<h2 class="font-semibold text-3xl sm:text-4xl text-brand-black tracking-tight mb-4" data-aos="fade-up">Four-step matching pipeline</h2>
+<p class="text-base text-brand-muted max-w-2xl mb-10" data-aos="fade-up" data-aos-delay="100">Deterministic rules clear the majority. Agentic AI resolves the rest — with verification before anything posts.</p>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+<div class="bg-white rounded-2xl p-6 border border-black/[0.06] shadow-[0_2px_12px_rgba(0,0,0,0.02)] card-lift" data-aos="fade-up" data-aos-delay="100">
+<span class="w-8 h-8 rounded-full bg-pastel-purple text-brand-black flex items-center justify-center font-mono text-xs font-semibold mb-4">01</span>
+<h3 class="font-semibold text-lg text-brand-black mb-2">Data Ingestion</h3>
+<p class="text-xs text-brand-muted leading-relaxed">CSV, bank feeds, PDF invoices, and ERP API sync into one matching substrate.</p>
+</div>
+<div class="bg-white rounded-2xl p-6 border border-black/[0.06] shadow-[0_2px_12px_rgba(0,0,0,0.02)] card-lift" data-aos="fade-up" data-aos-delay="200">
+<span class="w-8 h-8 rounded-full bg-pastel-cyan text-brand-black flex items-center justify-center font-mono text-xs font-semibold mb-4">02</span>
+<h3 class="font-semibold text-lg text-brand-black mb-2">Rule Engine</h3>
+<p class="text-xs text-brand-muted leading-relaxed">Exact reference, invoice, amount, and date matching — accounting-first clearance.</p>
+</div>
+<div class="bg-white rounded-2xl p-6 border border-black/[0.06] shadow-[0_2px_12px_rgba(0,0,0,0.02)] card-lift" data-aos="fade-up" data-aos-delay="100">
+<span class="w-8 h-8 rounded-full bg-pastel-amber text-brand-black flex items-center justify-center font-mono text-xs font-semibold mb-4">03</span>
+<h3 class="font-semibold text-lg text-brand-black mb-2">AI Matcher</h3>
+<p class="text-xs text-brand-muted leading-relaxed">MatchMemory rules, GSTIN awareness, and vector similarity for ambiguous payments.</p>
+</div>
+<div class="bg-white rounded-2xl p-6 border border-black/[0.06] shadow-[0_2px_12px_rgba(0,0,0,0.02)] card-lift" data-aos="fade-up" data-aos-delay="200">
+<span class="w-8 h-8 rounded-full bg-pastel-mint text-brand-black flex items-center justify-center font-mono text-xs font-semibold mb-4">04</span>
+<h3 class="font-semibold text-lg text-brand-black mb-2">Verification Gate</h3>
+<p class="text-xs text-brand-muted leading-relaxed">Accounting tolerance checks and double-entry validation before final application.</p>
+</div>
+</div>
+<div class="rounded-2xl bg-surface-panel border border-surface-border p-5 sm:p-6" data-aos="fade-up">
+<p class="text-sm text-brand-black leading-relaxed">
+<span class="font-semibold">ReconQ places accounting determinism first</span> — exact rules clear 70%+ of transactions instantly; unresolved ambiguity passes to AI agentic nodes.
+      </p>
+</div>
+</section>
+
+<!-- PRODUCT SHOWCASE -->
+<section class="max-w-[1280px] mx-auto px-4 sm:px-8 mb-28">
+<div class="flex items-center gap-4 mb-6">
+<span class="rounded-full px-3.5 py-1 text-xs font-semibold bg-black/[0.04] text-brand-black border border-black/[0.06]">Product Showcase</span>
+<div class="h-px bg-black/[0.08] flex-grow"></div>
+</div>
+<h2 class="font-semibold text-3xl sm:text-4xl text-brand-black tracking-tight mb-10" data-aos="fade-up">Cash application at a glance</h2>
+<div class="bg-surface-panel rounded-3xl p-4 sm:p-6 border border-surface-border shadow-[0_4px_24px_rgba(0,0,0,0.02)]" data-aos="fade-up" data-aos-delay="100">
+<div class="bg-white rounded-2xl border border-black/[0.08] overflow-hidden shadow-sm">
+<!-- Browser chrome -->
+<div class="flex items-center gap-2 px-4 py-3 border-b border-black/[0.06] bg-surface-panel/80">
+<span class="w-2.5 h-2.5 rounded-full bg-rose-400"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+<span class="ml-3 flex-1 max-w-md h-7 rounded-full bg-white border border-black/[0.06] flex items-center px-3">
+<span class="font-mono text-[10px] text-brand-muted truncate">app.intellq.ai / reconq / dashboard</span>
+</span>
+</div>
+<div class="p-5 sm:p-8">
+<div class="flex flex-wrap items-center justify-between gap-3 mb-6">
+<div>
+<span class="font-mono text-[10px] uppercase tracking-widest text-brand-muted block">ReconQ Console</span>
+<span class="text-lg font-semibold text-brand-black">Cash Application Overview</span>
+</div>
+<span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+              Live · Continuous Close
+            </span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<div class="glass-card rounded-2xl p-5">
+<span class="font-mono text-[10px] uppercase tracking-wider text-brand-muted block mb-1">Reconciled</span>
+<span class="text-2xl font-semibold text-brand-black">75.3%</span>
+<div class="mt-3 h-1.5 rounded-full bg-black/[0.06] overflow-hidden">
+<div class="h-full w-[75%] bg-brand-black rounded-full"></div>
+</div>
+</div>
+<div class="glass-card rounded-2xl p-5">
+<span class="font-mono text-[10px] uppercase tracking-wider text-brand-muted block mb-1">STP / Auto-Match</span>
+<span class="text-2xl font-semibold text-brand-black">80%</span>
+<div class="mt-3 h-1.5 rounded-full bg-black/[0.06] overflow-hidden">
+<div class="h-full w-[80%] bg-emerald-500 rounded-full"></div>
+</div>
+</div>
+<div class="glass-card rounded-2xl p-5">
+<span class="font-mono text-[10px] uppercase tracking-wider text-brand-muted block mb-1">Days Sales Outstanding</span>
+<span class="text-2xl font-semibold text-brand-black">6d</span>
+<p class="text-[11px] text-brand-muted mt-2">Target band: &lt;10 days</p>
+</div>
+<div class="glass-card rounded-2xl p-5">
+<span class="font-mono text-[10px] uppercase tracking-wider text-brand-muted block mb-1">Unapplied Cash</span>
+<span class="text-2xl font-semibold text-brand-black">₹18.58L</span>
+<p class="text-[11px] text-amber-700 mt-2 font-medium">In disposition queue</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- IMPACT STATS -->
+<section class="max-w-[1280px] mx-auto px-4 sm:px-8 mb-28">
+<div class="flex items-center gap-4 mb-6">
+<span class="rounded-full px-3.5 py-1 text-xs font-semibold bg-black/[0.04] text-brand-black border border-black/[0.06]">Quantified Executive Impact</span>
+<div class="h-px bg-black/[0.08] flex-grow"></div>
+</div>
+<h2 class="font-semibold text-3xl sm:text-4xl text-brand-black tracking-tight mb-10" data-aos="fade-up">Results that finance leaders measure</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="bg-white rounded-2xl p-6 border border-black/[0.06] shadow-sm card-lift" data-aos="fade-up" data-aos-delay="100">
+<span class="text-3xl font-semibold text-brand-black"><span class="stat-num" data-target="80" data-decimals="0">0</span>%</span>
+<p class="text-sm text-brand-muted mt-2 leading-relaxed">Reduction in Close Cycle Time</p>
+</div>
+<div class="bg-white rounded-2xl p-6 border border-black/[0.06] shadow-sm card-lift" data-aos="fade-up" data-aos-delay="200">
+<span class="text-3xl font-semibold text-brand-black"><span class="stat-num" data-target="99.8" data-decimals="1">0</span>%</span>
+<p class="text-sm text-brand-muted mt-2 leading-relaxed">Matching Precision</p>
+</div>
+<div class="bg-white rounded-2xl p-6 border border-black/[0.06] shadow-sm card-lift" data-aos="fade-up" data-aos-delay="100">
+<span class="text-3xl font-semibold text-brand-black"><span class="stat-num" data-target="70" data-decimals="0">0</span>%</span>
+<p class="text-sm text-brand-muted mt-2 leading-relaxed">Cost Savings vs HighRadius</p>
+</div>
+<div class="bg-white rounded-2xl p-6 border border-black/[0.06] shadow-sm card-lift" data-aos="fade-up" data-aos-delay="200">
+<span class="text-3xl font-semibold text-brand-black">&lt;<span class="stat-num" data-target="14" data-decimals="0">0</span> Days</span>
+<p class="text-sm text-brand-muted mt-2 leading-relaxed">to Full Deployment</p>
+</div>
+</div>
+</section>
+
+<!-- CTA / PILOT FORM -->
+<section class="max-w-[1280px] mx-auto px-4 sm:px-8 mb-28" id="pilot">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-5 flex flex-col justify-between" data-aos="fade-up">
+<div>
+<div class="inline-flex items-center gap-2 mb-3">
+<span class="w-1.5 h-1.5 bg-brand-black rounded-full"></span>
+<span class="font-mono text-xs uppercase tracking-widest text-brand-muted font-semibold">Schedule an Executive Pilot Today</span>
+</div>
+<h2 class="font-semibold text-3xl sm:text-4xl text-brand-black mb-4 tracking-tight leading-snug">
+            Experience 1-day autonomous financial close, instant GST/TDS cash application, and 100% explainable AI reconciliation. Launch your 14-day risk-free pilot.
+          </h2>
+<p class="text-sm sm:text-base text-brand-muted mb-8 leading-relaxed">
+            Talk to the AvariQ founding systems team. We’ll map your current close process and scope a focused ReconQ pilot.
+          </p>
+<div class="space-y-4">
+<div class="flex items-center gap-4">
+<span class="w-10 h-10 rounded-full bg-white border border-black/[0.08] flex items-center justify-center text-brand-black shadow-sm">
+<span class="material-symbols-outlined text-lg">alternate_email</span>
+</span>
+<div>
+<span class="font-mono text-[10px] text-brand-muted uppercase tracking-widest block">Direct Dispatch</span>
+<p class="text-xs sm:text-sm text-brand-black font-medium">team@intellq.ai</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-7" data-aos="fade-up" data-aos-delay="100">
+<div class="bg-white rounded-3xl p-6 sm:p-10 border border-black/[0.06] shadow-[0_4px_24px_rgba(0,0,0,0.03)]">
+<form class="space-y-5" onsubmit="event.preventDefault(); submitDemoForm(this);">
+<input type="text" name="_gotcha" style="display:none !important" tabindex="-1" autocomplete="off"/>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+<div class="space-y-1.5">
+<label class="text-xs font-medium text-brand-secondary" for="full_name">Full Name</label>
+<input class="w-full bg-surface-panel border border-black/[0.08] focus:border-brand-black focus:ring-0 text-brand-black px-4 py-3 text-sm rounded-xl transition-colors placeholder:text-brand-muted/60" id="full_name" name="full_name" placeholder="Elena Rostova" required="" type="text"/>
+</div>
+<div class="space-y-1.5">
+<label class="text-xs font-medium text-brand-secondary" for="work_email">Work Email</label>
+<input class="w-full bg-surface-panel border border-black/[0.08] focus:border-brand-black focus:ring-0 text-brand-black px-4 py-3 text-sm rounded-xl transition-colors placeholder:text-brand-muted/60" id="work_email" name="email" placeholder="elena@enterprise.io" required="" type="email"/>
+</div>
+</div>
+<div class="space-y-1.5">
+<label class="text-xs font-medium text-brand-secondary" for="company_name">Company / Organization</label>
+<input class="w-full bg-surface-panel border border-black/[0.08] focus:border-brand-black focus:ring-0 text-brand-black px-4 py-3 text-sm rounded-xl transition-colors placeholder:text-brand-muted/60" id="company_name" name="company" placeholder="Acro Logistics Corp" required="" type="text"/>
+</div>
+<div class="space-y-1.5">
+<label class="text-xs font-medium text-brand-secondary" for="use_case">Pilot focus</label>
+<textarea class="w-full bg-surface-panel border border-black/[0.08] focus:border-brand-black focus:ring-0 text-brand-black px-4 py-3 text-sm rounded-xl transition-colors placeholder:text-brand-muted/60 resize-none" id="use_case" name="message" placeholder="We want to pilot ReconQ on cash application for 2 bank feeds and our SAP AR ledger..." required="" rows="4"></textarea>
+</div>
+<input name="_subject" type="hidden" value="ReconQ Executive Pilot Request"/>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-2">
+<div class="flex items-center gap-2">
+<input checked="" class="w-4 h-4 rounded text-brand-black focus:ring-0 border-black/20 cursor-pointer" id="nda_consent" name="nda" type="checkbox"/>
+<label class="text-xs text-brand-muted cursor-pointer" for="nda_consent">Require mutual standard NDA</label>
+</div>
+<button class="rounded-full px-8 py-3.5 text-sm font-medium text-white bg-brand-black hover:bg-black/85 transition-all shadow-sm flex items-center justify-center gap-2 cursor-pointer active:scale-98" id="submit-btn" type="submit">
+<span>Request a Pilot</span>
+<span class="material-symbols-outlined text-[17px]">arrow_forward</span>
+</button>
+</div>
+<div class="hidden p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs text-center font-medium mt-3" id="form-success-msg">
+              ✓ Transmission confirmed. An IntellQ enterprise solutions engineer will respond within 4 hours.
+            </div>
+<div class="hidden p-4 rounded-xl bg-rose-50 border border-rose-200 text-rose-800 text-xs text-center font-medium mt-3" id="form-error-msg">
+              Something went wrong. Please try again or email team@intellq.ai.
+            </div>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+<footer class="w-full border-t border-black/[0.08] py-12 bg-transparent mt-auto">
+<div class="max-w-[1280px] mx-auto px-4 sm:px-8 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex flex-col sm:flex-row items-center gap-2 sm:gap-6 text-center sm:text-left">
+<a class="text-lg font-bold tracking-tight text-brand-black" href="index.html">IntellQ</a>
+<span class="text-sm text-brand-muted">© 2024 IntellQ AI. Engineered for precision.</span>
+</div>
+<div class="flex flex-wrap items-center justify-center gap-6">
+<a class="text-sm text-brand-muted hover:text-brand-black transition-colors" href="index.html">Home</a>
+<a class="text-sm text-brand-muted hover:text-brand-black transition-colors" href="index.html#modules">Modules</a>
+<a class="text-sm text-brand-muted hover:text-brand-black transition-colors" href="reconq.html">ReconQ</a>
+<a class="text-sm text-brand-muted hover:text-brand-black transition-colors" href="privacy.html">Privacy</a>
+</div>
+</div>
+</footer>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js" integrity="sha384-n1AULnKdMJlK1oQCLNDL9qZsDgXtH6jRYFCpBtWFc+a9Yve0KSoMn575rk755NJZ" crossorigin="anonymous"></script>
+<script src="assets/js/main.js" defer></script>
+</body></html>

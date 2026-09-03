@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<!-- TODO: header, footer, and contact form are duplicated across index.html and reconq.html — consider extracting to a build step or templating approach if more pages are added. -->
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>IntellQ — Agentic AI Operating System for Enterprise</title>
+<meta name="description" content="IntellQ is the Agentic AI Operating System by AvariQ. Connect operations, finance, customers, and decisions into one intelligence layer — from data to outcomes."/>
+<link rel="canonical" href="https://intellq.ai/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="IntellQ — Agentic AI Operating System for Enterprise"/>
+<meta property="og:description" content="One intelligence layer for enterprise operations. Data → Intelligence → Action → Outcomes."/>
+<meta property="og:url" content="https://intellq.ai/"/>
+<meta property="og:image" content="https://intellq.ai/assets/images/og-image.png"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "IntellQ",
+  "url": "https://intellq.ai",
+  "description": "Agentic AI Operating System for Enterprise by AvariQ",
+  "parentOrganization": {
+    "@type": "Organization",
+    "name": "AvariQ Systems"
+  }
+}
+</script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..24,400..600,0..1,0&amp;display=swap" rel="stylesheet"/>
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" integrity="sha384-/rJKQnzOkEo+daG0jMjU1IwwY9unxt1NBw3Ef2fmOJ3PW/TfAg2KXVoWwMZQZtw9" crossorigin="anonymous"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          surface: "#F7F7F5",
+          "surface-card": "#FFFFFF",
+          "surface-panel": "#F3F2EF",
+          "surface-border": "#E7E7E4",
+          "brand-black": "#09090B",
+          "brand-muted": "#71717A",
+          "brand-secondary": "#52525B",
+          "brand-accent": "#4648D4",
+          "pastel-purple": "#EDE9FE",
+          "pastel-mint": "#DCFCE7",
+          "pastel-amber": "#FEF3C7",
+          "pastel-cyan": "#E0F2FE"
+        },
+        fontFamily: {
+          sans: ["Geist", "Inter", "sans-serif"],
+          mono: ['"IBM Plex Mono"', "monospace"]
+        },
+        borderRadius: {
+          '2xl': '1.25rem',
+          '3xl': '1.75rem',
+          '4xl': '2.25rem'
+        }
+      }
+    }
+  }
+</script>
+<link rel="stylesheet" href="assets/css/styles.css"/>
+</head>
+<body class="antialiased min-h-screen flex flex-col selection:bg-black selection:text-white">
+<!-- 1. Header Navigation (Auralis Exact Style) -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-[#F7F7F5]/80 backdrop-blur-md border-b border-black/[0.06] transition-all">
+<div class="max-w-[1280px] mx-auto px-4 sm:px-8 h-[72px] flex items-center justify-between">
+<div class="flex items-center gap-10">
+<a class="flex items-center gap-2 group" href="index.html">
+<span class="font-bold text-[21px] tracking-tight text-brand-black">IntellQ</span>
+<span class="w-1.5 h-1.5 rounded-full bg-brand-black group-hover:bg-indigo-600 transition-colors"></span>
+</a>
+<div class="hidden sm:flex items-center pl-3 border-l border-black/10">
+<span class="font-mono text-[10px] tracking-[0.18em] text-brand-muted uppercase">by AvariQ</span>
+</div>
+<nav class="hidden md:flex items-center gap-7 text-sm font-medium tracking-tight text-brand-muted">
+<a class="hover:text-brand-black transition-colors" href="#platform">Platform</a>
+<a class="hover:text-brand-black transition-colors" href="#pipeline">Pipeline</a>
+<a class="hover:text-brand-black transition-colors" href="#modules">Modules</a>
+<a class="hover:text-brand-black transition-colors" href="#advantage">Advantage</a>
+<a class="hover:text-brand-black transition-colors" href="#roadmap">Roadmap</a>
+</nav>
+</div>
+<div class="flex items-center gap-3">
+<a class="hidden sm:inline-flex text-sm font-medium text-brand-secondary hover:text-brand-black px-3 py-2 transition-colors" href="#contact">Sign in</a>
+<a class="rounded-full bg-brand-black text-white px-5 py-2.5 text-sm font-medium hover:bg-black/85 transition-all shadow-sm active:scale-98" href="#contact">
+        Request Access
+      </a>
+</div>
+</div>
+</header>
+<!-- 2. Hero Section (Auralis Split Headline & Interactive Stage) -->
+<main class="flex-grow pt-[124px]">
+<section class="max-w-[1280px] mx-auto px-4 sm:px-8 pt-6 sm:pt-8 pb-12 sm:pb-16">
+<!-- Top badge -->
+<div class="mb-6 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/[0.04] border border-black/[0.06] text-xs font-medium text-brand-secondary" data-aos="fade-up">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+<span>Agentic AI Operating System</span>
+<span class="text-black/25">/</span>
+<span class="font-mono text-[11px] text-brand-black">Kernel v4.28 Active</span>
+</div>
+<!-- Split Grid Hero Title & Narrative -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-14">
+<div class="lg:col-span-8 flex flex-col">
+<h1 class="font-semibold text-4xl sm:text-6xl lg:text-[72px] text-brand-black tracking-tight leading-[1.06]" data-aos="fade-up">
+          Reimagining <br/>
+          Enterprise Intelligence
+        </h1>
+<div class="flex flex-wrap items-center gap-3.5 mt-8" data-aos="fade-up" data-aos-delay="100">
+<a class="rounded-full bg-brand-black text-white px-7 py-3.5 text-sm font-medium hover:bg-black/85 transition-all shadow-sm active:scale-98 flex items-center gap-2" href="#contact">
+<span>Request a Demo</span>
+<span class="material-symbols-outlined text-[17px]">arrow_forward</span>
+</a>
+<a class="rounded-full bg-white border border-black/15 text-brand-black px-6 py-3.5 text-sm font-medium hover:bg-black/[0.03] transition-all" href="#platform">
+            Explore the Platform
+          </a>
+</div>
+</div>
+<div class="lg:col-span-4 lg:col-start-9 flex lg:justify-end">
+<p class="text-base sm:text-lg text-brand-muted leading-relaxed max-w-sm pt-2" data-aos="fade-up" data-aos-delay="200">
+          IntellQ connects your operations, customers, finance, and decisions into one intelligence layer — where data becomes insight, insight becomes action, and action drives outcomes.
+        </p>
+</div>
+</div>
+<!-- Auralis Interactive Hero Visual Panel -->
+<div class="bg-surface-panel rounded-3xl p-4 sm:p-8 flex flex-col justify-between relative overflow-hidden border border-surface-border min-h-[480px] sm:min-h-[520px] lg:min-h-[580px] shadow-[0_4px_24px_rgba(0,0,0,0.02)] hero-panel" data-aos="fade-up" data-aos-delay="100">
+<!-- Top Control Bar -->
+<div class="flex flex-wrap justify-between items-center gap-3 z-10">
+<div class="flex bg-white/90 backdrop-blur-md p-1 rounded-full border border-black/[0.08] shadow-sm overflow-x-auto max-w-full">
+<button class="px-3 sm:px-4 py-2 bg-brand-black text-white rounded-full text-xs sm:text-sm font-medium shadow-sm transition-all whitespace-nowrap">IntellQ OS</button>
+<button class="px-3 sm:px-4 py-2 text-brand-muted rounded-full text-xs sm:text-sm font-medium hover:text-brand-black transition-colors whitespace-nowrap">Agent Runtime</button>
+<button class="px-3 sm:px-4 py-2 text-brand-muted rounded-full text-xs sm:text-sm font-medium hover:text-brand-black transition-colors whitespace-nowrap">Data Mesh</button>
+</div>
+<div class="bg-white/90 backdrop-blur-md px-4 py-2 rounded-full border border-black/[0.08] flex items-center gap-2 shadow-sm">
+<span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+<span class="text-xs sm:text-sm font-medium text-brand-black">Kernel Telemetry: Active</span>
+</div>
+</div>
+<!-- Center Ethereal Glowing Orbs -->
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<div class="w-[320px] h-[320px] rounded-full bg-gradient-to-tr from-rose-400/50 to-orange-300/45 blur-[80px] absolute orb-float-a"></div>
+<div class="w-[420px] h-[420px] rounded-full bg-gradient-to-tr from-indigo-500/40 via-purple-400/45 to-sky-400/40 blur-[90px] absolute orb-float-b"></div>
+<div class="w-[280px] h-[280px] rounded-full bg-gradient-to-tr from-emerald-400/40 to-teal-300/40 blur-[75px] absolute orb-float-c"></div>
+<div class="w-[340px] h-[340px] rounded-full bg-gradient-to-tr from-sky-400/45 to-blue-500/40 blur-[85px] absolute orb-float-d"></div>
+</div>
+<!-- Center Glassmorphic Synthesis Control Card -->
+<div class="z-10 self-center my-auto py-8 w-full max-w-[480px] px-1">
+<div class="glass-card rounded-[2rem] p-5 sm:p-7 shadow-[0_32px_64px_-16px_rgba(0,0,0,0.08)]">
+<div class="flex items-center justify-between mb-5 gap-3">
+<div class="min-w-0">
+<span class="font-mono text-[10px] font-semibold uppercase tracking-[0.2em] text-brand-muted block">IntellQ CORE v4.28</span>
+<span class="text-sm font-semibold text-brand-black">Omnichannel Autonomous Dispatch</span>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-semibold shrink-0">99.99% Live</span>
+</div>
+<!-- Dynamic Wave Spectrum -->
+<div class="flex items-end justify-between h-20 gap-1.5 mb-6 px-1">
+<div class="w-2 bg-gradient-to-t from-indigo-500/30 to-indigo-500 rounded-full h-[35%]"></div>
+<div class="w-2 bg-gradient-to-t from-indigo-500/30 to-indigo-500 rounded-full h-[60%]"></div>
+<div class="w-2 bg-gradient-to-t from-indigo-500/30 to-indigo-600 rounded-full h-[85%]"></div>
+<div class="w-2 bg-gradient-to-t from-purple-500/40 to-purple-600 rounded-full h-[100%]"></div>
+<div class="w-2 bg-gradient-to-t from-purple-500/40 to-purple-600 rounded-full h-[75%]"></div>
+<div class="w-2 bg-gradient-to-t from-sky-500/40 to-sky-500 rounded-full h-[55%]"></div>
+<div class="w-2 bg-gradient-to-t from-sky-500/40 to-sky-500 rounded-full h-[70%]"></div>
+<div class="w-2 bg-gradient-to-t from-indigo-500/40 to-indigo-600 rounded-full h-[90%]"></div>
+<div class="w-2 bg-gradient-to-t from-indigo-500/40 to-indigo-600 rounded-full h-[45%]"></div>
+<div class="w-2 bg-gradient-to-t from-emerald-500/40 to-teal-500 rounded-full h-[65%]"></div>
+<div class="w-2 bg-gradient-to-t from-emerald-500/40 to-teal-500 rounded-full h-[30%]"></div>
+</div>
+<div class="grid grid-cols-3 gap-3 sm:gap-4 pt-4 border-t border-black/[0.06]">
+<div>
+<span class="font-mono text-[9px] uppercase tracking-wider text-brand-muted block">SYNC LATENCY</span>
+<span class="text-base font-semibold text-brand-black"><span class="stat-num" data-target="1.84" data-decimals="2">0</span>ms</span>
+</div>
+<div>
+<span class="font-mono text-[9px] uppercase tracking-wider text-brand-muted block">AUTONOMOUS</span>
+<span class="text-base font-semibold text-brand-black"><span class="stat-num" data-target="42" data-decimals="0">0</span> Agents</span>
+</div>
+<div>
+<span class="font-mono text-[9px] uppercase tracking-wider text-brand-muted block">DATA DRIFT</span>
+<span class="text-base font-semibold text-emerald-600"><span class="stat-num" data-target="0" data-decimals="2">0</span>%</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Pill Toolbar -->
+<div class="flex flex-wrap justify-between items-center gap-4 z-10 bg-white/80 backdrop-blur-md p-3.5 sm:p-4 rounded-2xl border border-surface-border">
+<div class="flex items-center gap-4 sm:gap-6 overflow-x-auto text-xs sm:text-sm font-medium text-brand-muted max-w-full">
+<span class="text-brand-black font-semibold whitespace-nowrap">ERP Ledger Mesh</span>
+<span class="whitespace-nowrap">CRM Synchronizer</span>
+<span class="whitespace-nowrap">Automated Reconciliation</span>
+<span class="whitespace-nowrap">Zero-ETL Fabric</span>
+</div>
+<a class="rounded-full bg-brand-black text-white px-5 py-2 text-xs font-medium hover:bg-black/85 transition-all whitespace-nowrap ml-auto" href="#contact">
+          Schedule Walkthrough
+        </a>
+</div>
+</div>
+</section>
+<!-- 3. Trusted By Partner Strip (Auralis Minimal Clean Logos) -->
+<section class="max-w-[1280px] mx-auto px-4 sm:px-8 text-center pt-8 mb-4">
+<h3 class="font-mono text-[11px] font-semibold text-brand-muted uppercase tracking-[0.22em]" data-aos="fade-up">
+      Trusted by forward teams building enterprise autonomy
+    </h3>
+</section>
+<!-- Marquee: left untouched (no AOS) -->
+<section class="w-full overflow-hidden mb-28 py-6">
+<div class="flex whitespace-nowrap overflow-hidden group">
+<div class="flex items-center gap-24 animate-marquee group-hover:pause-marquee">
+<div class="flex items-center gap-2 text-black/30 hover:text-black font-bold text-lg uppercase tracking-tight transition-colors"><span class="material-symbols-outlined text-2xl">auto_awesome</span>Lumina</div>
+<div class="flex items-center gap-2 text-black/30 hover:text-black font-bold text-lg uppercase tracking-tight transition-colors"><span class="material-symbols-outlined text-2xl">layers</span>Stack</div>
+<div class="flex items-center gap-2 text-black/30 hover:text-black font-bold text-lg uppercase tracking-tight transition-colors"><span class="material-symbols-outlined text-2xl">token</span>Quanta</div>
+<div class="flex items-center gap-2 text-black/30 hover:text-black font-bold text-lg uppercase tracking-tight transition-colors"><span class="material-symbols-outlined text-2xl">hub</span>Orbital</div>
+<div class="flex items-center gap-2 text-black/30 hover:text-black font-bold text-lg uppercase tracking-tight transition-colors"><span class="material-symbols-outlined text-2xl">alt_route</span>Causality</div>
+<div class="flex items-center gap-2 text-black/30 hover:text-black font-bold text-lg uppercase tracking-tight transition-colors"><span class="material-symbols-outlined text-2xl">deployed_code</span>Nexus</div>
+<div class="flex items-center gap-2 text-black/30 hover:text-black font-bold text-lg uppercase tracking-tight transition-colors"><span class="material-symbols-outlined text-2xl">bolt</span>Velocity</div>
+</div>
+<div aria-hidden="true" class="flex items-center gap-24 animate-marquee group-hover:pause-marquee">
+<div class="flex items-center gap-2 text-black/30 hover:text-black font-bold text-lg uppercase tracking-tight transition-colors"><span class="material-symbols-outlined text-2xl">auto_awesome</span>Lumina</div>
+<div class="flex items-center gap-2 text-black/30 hover:text-black font-bold text-lg uppercase tracking-tight transition-colors"><span class="material-symbols-outlined text-2xl">layers</span>Stack</div>
+<div class="flex items-center gap-2 text-black/30 hover:text-black font-bold text-lg uppercase tracking-tight transition-colors"><span class="material-symbols-outlined text-2xl">token</span>Quanta</div>
+<div class="flex items-center gap-2 text-black/30 hover:text-black font-bold text-lg uppercase tracking-tight transition-colors"><span class="material-symbols-outlined text-2xl">hub</span>Orbital</div>
+<div class="flex items-center gap-2 text-black/30 hover:text-black font-bold text-lg uppercase tracking-tight transition-colors"><span class="material-symbols-outlined text-2xl">alt_route</span>Causality</div>
+<div class="flex items-center gap-2 text-black/30 hover:text-black font-bold text-lg uppercase tracking-tight transition-colors"><span class="material-symbols-outlined text-2xl">deployed_code</span>Nexus</div>
+<div class="flex items-center gap-2 text-black/30 hover:text-black font-bold text-lg uppercase tracking-tight transition-colors"><span class="material-symbols-outlined text-2xl">bolt</span>Velocity</div>
+</div>
+</div>
+</section>
+<!-- 4. Pipeline Section: Autonomous Convergence Pipeline (Soft pastel cards) -->
+<section class="max-w-[1280px] mx-auto px-4 sm:px-8 mb-36" id="pipeline">
+<div class="flex items-center gap-4 mb-6">
+<span class="rounded-full px-3.5 py-1 text-xs font-semibold bg-black/[0.04] text-brand-black border border-black/[0.06]">
+        Architecture
+      </span>
+<div class="h-px bg-black/[0.08] flex-grow"></div>
+<span class="font-mono text-xs text-brand-muted">A product line by AvariQ</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12">
+<div class="lg:col-span-7">
+<h2 class="font-semibold text-3xl sm:text-5xl text-brand-black tracking-tight leading-tight" data-aos="fade-up">
+          Autonomous Convergence Pipeline
+        </h2>
+</div>
+<div class="lg:col-span-5 flex items-end">
+<p class="text-base text-brand-muted leading-relaxed" data-aos="fade-up" data-aos-delay="100">
+          Four synchronized layers that transform fragmented raw operations into zero-drift, self-executing business outcomes.
+        </p>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Stage 01 -->
+<div class="bg-white rounded-2xl p-6 border border-black/[0.06] shadow-[0_2px_12px_rgba(0,0,0,0.02)] card-lift flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="w-8 h-8 rounded-full bg-pastel-purple text-brand-black flex items-center justify-center font-mono text-xs font-semibold">01</span>
+<span class="material-symbols-outlined text-brand-muted text-xl">database</span>
+</div>
+<h4 class="font-semibold text-lg text-brand-black mb-2">Data Ingestion</h4>
+<p class="text-xs sm:text-sm text-brand-muted leading-relaxed">Multi-system raw ingestion across ERP, CRM, and transactional telemetry streams.</p>
+</div>
+<div class="mt-6 pt-4 border-t border-black/[0.05] flex items-center justify-between font-mono text-[11px] text-brand-muted">
+<span>FLOW: BIDIRECTIONAL</span>
+<span class="text-indigo-600 font-medium">LIVE</span>
+</div>
+</div>
+<!-- Stage 02 -->
+<div class="bg-white rounded-2xl p-6 border border-black/[0.06] shadow-[0_2px_12px_rgba(0,0,0,0.02)] card-lift flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="w-8 h-8 rounded-full bg-pastel-cyan text-brand-black flex items-center justify-center font-mono text-xs font-semibold">02</span>
+<span class="material-symbols-outlined text-brand-muted text-xl">neurology</span>
+</div>
+<h4 class="font-semibold text-lg text-brand-black mb-2">Intelligence</h4>
+<p class="text-xs sm:text-sm text-brand-muted leading-relaxed">Semantic correlation and dynamic cognitive reasoning synthesis across enterprise graph.</p>
+</div>
+<div class="mt-6 pt-4 border-t border-black/[0.05] flex items-center justify-between font-mono text-[11px] text-brand-muted">
+<span>LATENCY: &lt;4MS</span>
+<span class="text-sky-600 font-medium">ACTIVE</span>
+</div>
+</div>
+<!-- Stage 03 -->
+<div class="bg-white rounded-2xl p-6 border border-black/[0.06] shadow-[0_2px_12px_rgba(0,0,0,0.02)] card-lift flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="w-8 h-8 rounded-full bg-pastel-amber text-brand-black flex items-center justify-center font-mono text-xs font-semibold">03</span>
+<span class="material-symbols-outlined text-brand-muted text-xl">bolt</span>
+</div>
+<h4 class="font-semibold text-lg text-brand-black mb-2">Action Dispatch</h4>
+<p class="text-xs sm:text-sm text-brand-muted leading-relaxed">Autonomous execution protocols triggering workflows, reconciliations, and API mutations.</p>
+</div>
+<div class="mt-6 pt-4 border-t border-black/[0.05] flex items-center justify-between font-mono text-[11px] text-brand-muted">
+<span>ROUTING: MESH</span>
+<span class="text-amber-700 font-medium">READY</span>
+</div>
+</div>
+<!-- Stage 04 -->
+<div class="bg-white rounded-2xl p-6 border border-black/[0.06] shadow-[0_2px_12px_rgba(0,0,0,0.02)] card-lift flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="w-8 h-8 rounded-full bg-pastel-mint text-brand-black flex items-center justify-center font-mono text-xs font-semibold">04</span>
+<span class="material-symbols-outlined text-brand-muted text-xl">verified</span>
+</div>
+<h4 class="font-semibold text-lg text-brand-black mb-2">Verified Outcomes</h4>
+<p class="text-xs sm:text-sm text-brand-muted leading-relaxed">Zero-drift execution telemetry, continuous margin gains, and auditable enterprise ROI.</p>
+</div>
+<div class="mt-6 pt-4 border-t border-black/[0.05] flex items-center justify-between font-mono text-[11px] text-brand-muted">
+<span>DRIFT: 0.00%</span>
+<span class="text-emerald-600 font-medium">RESOLVED</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. Architectural Bottleneck: Symmetrical Clean Cards -->
+<section class="max-w-[1280px] mx-auto px-4 sm:px-8 mb-36">
+<div class="max-w-3xl mb-12">
+<div class="inline-flex items-center gap-2 mb-3">
+<span class="w-1.5 h-1.5 bg-rose-500 rounded-full"></span>
+<span class="font-mono text-xs uppercase tracking-widest text-brand-muted font-semibold">The Architectural Bottleneck</span>
+</div>
+<h2 class="font-semibold text-3xl sm:text-4xl text-brand-black mb-4 tracking-tight leading-snug" data-aos="fade-up">
+        Systems generate data. They rarely generate intelligence.
+      </h2>
+<p class="text-base text-brand-muted leading-relaxed" data-aos="fade-up" data-aos-delay="100">
+        Today's enterprise infrastructure operates in fragmented isolation. Billions spent on SaaS applications yield disconnected islands of data, manual spreadsheet reconciliations, and slow cognitive blind spots.
+      </p>
+</div>
+<!-- 6 Silo Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="bg-white rounded-2xl p-6 border border-black/[0.06] shadow-sm hover:border-black/20 transition-all" data-aos="fade-up" data-aos-delay="100">
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-brand-black">account_tree</span>
+<h3 class="font-semibold text-base text-brand-black">ERP Systems</h3>
+</div>
+<span class="px-2.5 py-0.5 rounded-full text-[11px] font-medium text-rose-700 bg-rose-50 border border-rose-100">Siloed</span>
+</div>
+<p class="text-xs text-brand-muted mb-6 leading-relaxed">SAP, NetSuite, and Oracle lock transactional ledger data away behind slow batch reporting walls.</p>
+<div class="flex items-center justify-between font-mono text-xs text-brand-muted pt-3 border-t border-black/[0.05]">
+<span>+24h Delays</span>
+<span class="text-rose-600 font-medium">Broken Sync</span>
+</div>
+</div>
+<div class="bg-white rounded-2xl p-6 border border-black/[0.06] shadow-sm hover:border-black/20 transition-all" data-aos="fade-up" data-aos-delay="200">
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-brand-black">groups</span>
+<h3 class="font-semibold text-base text-brand-black">CRM Silos</h3>
+</div>
+<span class="px-2.5 py-0.5 rounded-full text-[11px] font-medium text-rose-700 bg-rose-50 border border-rose-100">Desynched</span>
+</div>
+<p class="text-xs text-brand-muted mb-6 leading-relaxed">Salesforce &amp; HubSpot capture client pipeline interactions disconnected from actual delivery capability.</p>
+<div class="flex items-center justify-between font-mono text-xs text-brand-muted pt-3 border-t border-black/[0.05]">
+<span>62% Blind</span>
+<span class="text-rose-600 font-medium">Pipeline Drift</span>
+</div>
+</div>
+<div class="bg-white rounded-2xl p-6 border border-black/[0.06] shadow-sm hover:border-black/20 transition-all" data-aos="fade-up" data-aos-delay="100">
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-brand-black">badge</span>
+<h3 class="font-semibold text-base text-brand-black">HR &amp; Workforce</h3>
+</div>
+<span class="px-2.5 py-0.5 rounded-full text-[11px] font-medium text-rose-700 bg-rose-50 border border-rose-100">Manual</span>
+</div>
+<p class="text-xs text-brand-muted mb-6 leading-relaxed">Workday and BambooHR manage headcount without real-time telemetry linkage to billable output.</p>
+<div class="flex items-center justify-between font-mono text-xs text-brand-muted pt-3 border-t border-black/[0.05]">
+<span>Static Allocation</span>
+<span class="text-rose-600 font-medium">Unlinked</span>
+</div>
+</div>
+<div class="bg-white rounded-2xl p-6 border border-black/[0.06] shadow-sm hover:border-black/20 transition-all" data-aos="fade-up" data-aos-delay="200">
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-brand-black">receipt_long</span>
+<h3 class="font-semibold text-base text-brand-black">Accounting</h3>
+</div>
+<span class="px-2.5 py-0.5 rounded-full text-[11px] font-medium text-rose-700 bg-rose-50 border border-rose-100">Reactive</span>
+</div>
+<p class="text-xs text-brand-muted mb-6 leading-relaxed">QuickBooks and Xero record what happened weeks ago, incapable of steering transactions in flight.</p>
+<div class="flex items-center justify-between font-mono text-xs text-brand-muted pt-3 border-t border-black/[0.05]">
+<span>Manual Recon</span>
+<span class="text-rose-600 font-medium">Friction</span>
+</div>
+</div>
+<div class="bg-white rounded-2xl p-6 border border-black/[0.06] shadow-sm hover:border-black/20 transition-all" data-aos="fade-up" data-aos-delay="100">
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-brand-black">table_view</span>
+<h3 class="font-semibold text-base text-brand-black">Spreadsheet Chaos</h3>
+</div>
+<span class="px-2.5 py-0.5 rounded-full text-[11px] font-medium text-rose-700 bg-rose-50 border border-rose-100">High Risk</span>
+</div>
+<p class="text-xs text-brand-muted mb-6 leading-relaxed">Fragile macros in Excel &amp; Google Sheets duct-tape operations together with human error exposure.</p>
+<div class="flex items-center justify-between font-mono text-xs text-brand-muted pt-3 border-t border-black/[0.05]">
+<span>Zero Governance</span>
+<span class="text-rose-600 font-medium">Fragile</span>
+</div>
+</div>
+<div class="bg-white rounded-2xl p-6 border border-black/[0.06] shadow-sm hover:border-black/20 transition-all" data-aos="fade-up" data-aos-delay="200">
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-brand-black">hub</span>
+<h3 class="font-semibold text-base text-brand-black">Point Tool Sprawl</h3>
+</div>
+<span class="px-2.5 py-0.5 rounded-full text-[11px] font-medium text-rose-700 bg-rose-50 border border-rose-100">Bloat</span>
+</div>
+<p class="text-xs text-brand-muted mb-6 leading-relaxed">Hundreds of departmental micro-SaaS subscriptions that duplicate workflows and create security gaps.</p>
+<div class="flex items-center justify-between font-mono text-xs text-brand-muted pt-3 border-t border-black/[0.05]">
+<span>Escalating Cost</span>
+<span class="text-rose-600 font-medium">Overhead</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. Platform: One Intelligence Layer (Workstation Card + Checklist) -->
+<section class="max-w-[1280px] mx-auto px-4 sm:px-8 mb-36" id="platform">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<!-- Left Visual Matrix Card -->
+<div class="lg:col-span-6" data-aos="fade-up">
+<div class="bg-surface-panel rounded-3xl p-6 sm:p-8 border border-surface-border relative overflow-hidden shadow-sm">
+<div class="flex items-center justify-between pb-4 border-b border-black/[0.06] mb-6">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+<span class="font-mono text-xs uppercase tracking-widest text-brand-black font-semibold">Convergence Matrix</span>
+</div>
+<span class="font-mono text-xs text-brand-muted">Active Topology</span>
+</div>
+<div class="relative w-full h-64 sm:h-80 flex items-center justify-center bg-white rounded-2xl border border-black/[0.06] overflow-hidden">
+<!-- Center Sphere -->
+<div class="relative z-20 flex flex-col items-center justify-center w-36 h-36 rounded-full bg-brand-black text-white p-4 text-center shadow-xl">
+<span class="material-symbols-outlined text-2xl text-emerald-400">grain</span>
+<span class="text-sm font-semibold tracking-tight mt-1">IntellQ OS</span>
+<span class="font-mono text-[9px] text-white/60 tracking-wider">CORE KERNEL</span>
+</div>
+<!-- Connected Nodes -->
+<div class="absolute top-6 left-6 flex items-center gap-1.5 bg-surface-panel px-3 py-1.5 rounded-full border border-black/[0.08] text-xs font-medium shadow-sm">
+<span class="material-symbols-outlined text-sm text-indigo-600">account_balance</span> ERP Ledger
+            </div>
+<div class="absolute top-6 right-6 flex items-center gap-1.5 bg-surface-panel px-3 py-1.5 rounded-full border border-black/[0.08] text-xs font-medium shadow-sm">
+<span class="material-symbols-outlined text-sm text-sky-600">handshake</span> CRM Graph
+            </div>
+<div class="absolute bottom-6 left-6 flex items-center gap-1.5 bg-surface-panel px-3 py-1.5 rounded-full border border-black/[0.08] text-xs font-medium shadow-sm">
+<span class="material-symbols-outlined text-sm text-amber-600">group_work</span> Workforce
+            </div>
+<div class="absolute bottom-6 right-6 flex items-center gap-1.5 bg-surface-panel px-3 py-1.5 rounded-full border border-black/[0.08] text-xs font-medium shadow-sm">
+<span class="material-symbols-outlined text-sm text-emerald-600">payments</span> Bank Rails
+            </div>
+<!-- Connector SVG -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none stroke-black/15" fill="none">
+<path d="M 80 45 L 200 145" stroke-dasharray="4 4"></path>
+<path d="M 330 45 L 240 145" stroke-dasharray="4 4"></path>
+<path d="M 85 275 L 200 185" stroke-dasharray="4 4"></path>
+<path d="M 325 275 L 240 185" stroke-dasharray="4 4"></path>
+</svg>
+</div>
+<div class="grid grid-cols-3 gap-3 mt-5 pt-4 border-t border-black/[0.06]">
+<div class="bg-white p-3 rounded-xl border border-black/[0.06] text-center">
+<span class="font-mono text-[9px] text-brand-muted uppercase">SYNC LATENCY</span>
+<p class="text-sm font-semibold text-brand-black mt-0.5"><span class="stat-num" data-target="4.12" data-decimals="2">0</span> ms</p>
+</div>
+<div class="bg-white p-3 rounded-xl border border-black/[0.06] text-center">
+<span class="font-mono text-[9px] text-brand-muted uppercase">ORCHESTRATION</span>
+<p class="text-sm font-semibold text-brand-black mt-0.5"><span class="stat-num" data-target="99.98" data-decimals="2">0</span>%</p>
+</div>
+<div class="bg-white p-3 rounded-xl border border-black/[0.06] text-center">
+<span class="font-mono text-[9px] text-brand-muted uppercase">AGENTS ACTIVE</span>
+<p class="text-sm font-semibold text-brand-black mt-0.5"><span class="stat-num" data-target="42" data-decimals="0">0</span> LIVE</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Description & Features -->
+<div class="lg:col-span-6 flex flex-col" data-aos="fade-up" data-aos-delay="100">
+<div class="inline-flex items-center gap-2 mb-2">
+<span class="w-1.5 h-1.5 bg-brand-black rounded-full"></span>
+<span class="font-mono text-xs uppercase tracking-widest text-brand-muted font-semibold">The Solution</span>
+</div>
+<h2 class="font-semibold text-3xl sm:text-4xl text-brand-black mb-4 tracking-tight leading-tight">
+          One unified intelligence layer, <br class="hidden sm:inline"/>
+          not another application.
+        </h2>
+<p class="text-base text-brand-muted mb-8 leading-relaxed">
+          IntellQ dissolves artificial software boundaries. It runs beneath and alongside your business operations as an omnipresent cognitive substrate—reading across legacy silos, reasoning in real time, and deploying autonomous agents to execute end-to-end tasks with zero friction.
+        </p>
+<div class="space-y-3.5">
+<div class="flex items-start gap-3.5 p-4 rounded-2xl bg-white border border-black/[0.06] shadow-sm">
+<span class="w-6 h-6 rounded-full bg-brand-black text-white flex items-center justify-center text-xs mt-0.5 shrink-0">
+<span class="material-symbols-outlined text-sm font-bold">check</span>
+</span>
+<div>
+<h4 class="font-semibold text-sm text-brand-black">Data integration across every source</h4>
+<p class="text-xs text-brand-muted mt-0.5">Zero-ETL semantic mesh that unifies PostgreSQL, Snowflake, legacy SAP, and real-time webhooks.</p>
+</div>
+</div>
+<div class="flex items-start gap-3.5 p-4 rounded-2xl bg-white border border-black/[0.06] shadow-sm">
+<span class="w-6 h-6 rounded-full bg-brand-black text-white flex items-center justify-center text-xs mt-0.5 shrink-0">
+<span class="material-symbols-outlined text-sm font-bold">check</span>
+</span>
+<div>
+<h4 class="font-semibold text-sm text-brand-black">Workflow automation end to end</h4>
+<p class="text-xs text-brand-muted mt-0.5">Replaces multi-department ticket ping-pong with instant event-driven pipeline execution.</p>
+</div>
+</div>
+<div class="flex items-start gap-3.5 p-4 rounded-2xl bg-white border border-black/[0.06] shadow-sm">
+<span class="w-6 h-6 rounded-full bg-brand-black text-white flex items-center justify-center text-xs mt-0.5 shrink-0">
+<span class="material-symbols-outlined text-sm font-bold">check</span>
+</span>
+<div>
+<h4 class="font-semibold text-sm text-brand-black">AI-generated insight, not just passive reports</h4>
+<p class="text-xs text-brand-muted mt-0.5">Contextual foresight that surfaces margin anomalies, demand surges, and supplier risks proactively.</p>
+</div>
+</div>
+<div class="flex items-start gap-3.5 p-4 rounded-2xl bg-white border border-black/[0.06] shadow-sm">
+<span class="w-6 h-6 rounded-full bg-brand-black text-white flex items-center justify-center text-xs mt-0.5 shrink-0">
+<span class="material-symbols-outlined text-sm font-bold">check</span>
+</span>
+<div>
+<h4 class="font-semibold text-sm text-brand-black">Autonomous agents that take action</h4>
+<p class="text-xs text-brand-muted mt-0.5">Self-directed software agents dispatch invoices, rebook appointments, and reconcile discrepancies unattended.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. Eight Modules Grid (Auralis Clean Rounded-2xl Cards & Phase Pills) -->
+<section class="max-w-[1280px] mx-auto px-4 sm:px-8 mb-36" id="modules">
+<div class="flex items-center gap-4 mb-6">
+<span class="rounded-full px-3.5 py-1 text-xs font-semibold bg-black/[0.04] text-brand-black border border-black/[0.06]">
+        Modular Capabilities
+      </span>
+<div class="h-px bg-black/[0.08] flex-grow"></div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-14">
+<div class="lg:col-span-7">
+<h2 class="font-semibold text-3xl sm:text-5xl text-brand-black tracking-tight leading-tight" data-aos="fade-up">
+          Eight Modules. One Intelligence Layer.
+        </h2>
+</div>
+<div class="lg:col-span-5 flex items-end">
+<p class="text-base text-brand-muted leading-relaxed" data-aos="fade-up" data-aos-delay="100">
+          Every module runs on the same core — the same data, the same agents, the same intelligence. Adopt one standalone capability today, or orchestrate the unified full stack.
+        </p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Mod 1 -->
+<div class="bg-white rounded-2xl p-6 border border-black/[0.06] shadow-[0_2px_12px_rgba(0,0,0,0.02)] card-lift flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="w-9 h-9 rounded-full bg-pastel-purple text-brand-black flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">layers</span>
+</span>
+<span class="rounded-full px-2.5 py-0.5 font-mono text-[10px] font-semibold bg-zinc-100 text-brand-secondary border border-zinc-200">CORE</span>
+</div>
+<h3 class="font-semibold text-lg text-brand-black mb-1.5">Enterprise OS</h3>
+<p class="text-xs text-brand-muted leading-relaxed mb-6">The AI-native operating layer for finance, CRM, procurement, HR, and compliance — connecting day-to-day operations into one governed intelligence surface.</p>
+</div>
+<div class="pt-3 border-t border-black/[0.05] flex items-center justify-between font-mono text-[11px] text-brand-muted">
+<span>DEDICATED</span>
+<span class="font-medium text-brand-black">MOD-01</span>
+</div>
+</div>
+<!-- Mod 2 -->
+<div class="bg-white rounded-2xl p-6 border border-black/[0.06] shadow-[0_2px_12px_rgba(0,0,0,0.02)] card-lift flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="w-9 h-9 rounded-full bg-pastel-cyan text-brand-black flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">schedule</span>
+</span>
+<span class="rounded-full px-2.5 py-0.5 font-mono text-[10px] font-semibold bg-zinc-100 text-brand-secondary border border-zinc-200">PHASE 1</span>
+</div>
+<h3 class="font-semibold text-lg text-brand-black mb-1.5">SmartTime</h3>
+<p class="text-xs text-brand-muted leading-relaxed mb-6">Intelligent scheduling for clinics, salons, and fitness studios — balancing practitioner capacity, no-shows, and client demand without spreadsheet juggling.</p>
+</div>
+<div class="pt-3 border-t border-black/[0.05] flex items-center justify-between font-mono text-[11px] text-brand-muted">
+<span>UTILIZATION: +38%</span>
+<span class="font-medium text-brand-black">MOD-02</span>
+</div>
+</div>
+<!-- Mod 3 -->
+<div class="bg-white rounded-2xl p-6 border border-black/[0.06] shadow-[0_2px_12px_rgba(0,0,0,0.02)] card-lift flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="w-9 h-9 rounded-full bg-pastel-mint text-brand-black flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">calendar_month</span>
+</span>
+<span class="rounded-full px-2.5 py-0.5 font-mono text-[10px] font-semibold bg-zinc-100 text-brand-secondary border border-zinc-200">PHASE 1</span>
+</div>
+<h3 class="font-semibold text-lg text-brand-black mb-1.5">BookMyQ</h3>
+<p class="text-xs text-brand-muted leading-relaxed mb-6">Omnichannel booking across web, WhatsApp, mobile apps, and QR — so customers book where they already are, and operators keep one source of truth.</p>
+</div>
+<div class="pt-3 border-t border-black/[0.05] flex items-center justify-between font-mono text-[11px] text-brand-muted">
+<span>MULTI-CHANNEL</span>
+<span class="font-medium text-brand-black">MOD-03</span>
+</div>
+</div>
+<!-- Mod 4 — ReconQ -->
+<a class="bg-white rounded-2xl p-6 border border-black/[0.06] shadow-[0_2px_12px_rgba(0,0,0,0.02)] card-lift flex flex-col justify-between group" data-aos="fade-up" data-aos-delay="200" href="reconq.html">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="w-9 h-9 rounded-full bg-pastel-amber text-brand-black flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">account_balance_wallet</span>
+</span>
+<span class="rounded-full px-2.5 py-0.5 font-mono text-[10px] font-semibold bg-zinc-100 text-brand-secondary border border-zinc-200">PHASE 1</span>
+</div>
+<h3 class="font-semibold text-lg text-brand-black mb-1.5 group-hover:underline underline-offset-2">ReconQ AI</h3>
+<p class="text-xs text-brand-muted leading-relaxed mb-6">Autonomous cash application and ledger matching — exact rules first, AI disposition for ambiguity, with full decision lineage for month-end close.</p>
+</div>
+<div class="pt-3 border-t border-black/[0.05] flex items-center justify-between font-mono text-[11px] text-brand-muted">
+<span>PRECISION: 99.98%</span>
+<span class="font-medium text-brand-black">MOD-04 →</span>
+</div>
+</a>
+<!-- Mod 5 -->
+<div class="bg-white rounded-2xl p-6 border border-black/[0.06] shadow-[0_2px_12px_rgba(0,0,0,0.02)] card-lift flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="w-9 h-9 rounded-full bg-pastel-purple text-brand-black flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">query_stats</span>
+</span>
+<span class="rounded-full px-2.5 py-0.5 font-mono text-[10px] font-semibold bg-zinc-100 text-brand-secondary border border-zinc-200">PHASE 2</span>
+</div>
+<h3 class="font-semibold text-lg text-brand-black mb-1.5">InsightQ</h3>
+<p class="text-xs text-brand-muted leading-relaxed mb-6">Analytics, live dashboards, and forecasting that surface cash, utilization, and operational risk before they become month-end surprises.</p>
+</div>
+<div class="pt-3 border-t border-black/[0.05] flex items-center justify-between font-mono text-[11px] text-brand-muted">
+<span>PREDICTIVE</span>
+<span class="font-medium text-brand-black">MOD-05</span>
+</div>
+</div>
+<!-- Mod 6 -->
+<div class="bg-white rounded-2xl p-6 border border-black/[0.06] shadow-[0_2px_12px_rgba(0,0,0,0.02)] card-lift flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="w-9 h-9 rounded-full bg-pastel-cyan text-brand-black flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">chat</span>
+</span>
+<span class="rounded-full px-2.5 py-0.5 font-mono text-[10px] font-semibold bg-zinc-100 text-brand-secondary border border-zinc-200">PHASE 2</span>
+</div>
+<h3 class="font-semibold text-lg text-brand-black mb-1.5">AssistQ</h3>
+<p class="text-xs text-brand-muted leading-relaxed mb-6">A natural-language enterprise copilot — ask about finance, operations, or customers and get grounded answers from your live systems, not static reports.</p>
+</div>
+<div class="pt-3 border-t border-black/[0.05] flex items-center justify-between font-mono text-[11px] text-brand-muted">
+<span>NATURAL LANG</span>
+<span class="font-medium text-brand-black">MOD-06</span>
+</div>
+</div>
+<!-- Mod 7 -->
+<div class="bg-white rounded-2xl p-6 border border-black/[0.06] shadow-[0_2px_12px_rgba(0,0,0,0.02)] card-lift flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="w-9 h-9 rounded-full bg-pastel-amber text-brand-black flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">smart_toy</span>
+</span>
+<span class="rounded-full px-2.5 py-0.5 font-mono text-[10px] font-semibold bg-zinc-100 text-brand-secondary border border-zinc-200">PHASE 4</span>
+</div>
+<h3 class="font-semibold text-lg text-brand-black mb-1.5">AgentQ</h3>
+<p class="text-xs text-brand-muted leading-relaxed mb-6">An autonomous AI workforce for Phase 4 rollout — agents that execute governed workflows across reconciliation, fulfillment, and audit with human oversight rails.</p>
+</div>
+<div class="pt-3 border-t border-black/[0.05] flex items-center justify-between font-mono text-[11px] text-brand-muted">
+<span>TIER-4 SWARM</span>
+<span class="font-medium text-brand-black">MOD-07</span>
+</div>
+</div>
+<!-- Mod 8 -->
+<div class="bg-white rounded-2xl p-6 border border-black/[0.06] shadow-[0_2px_12px_rgba(0,0,0,0.02)] card-lift flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="w-9 h-9 rounded-full bg-pastel-mint text-brand-black flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">hub</span>
+</span>
+<span class="rounded-full px-2.5 py-0.5 font-mono text-[10px] font-semibold bg-zinc-100 text-brand-secondary border border-zinc-200">CORE</span>
+</div>
+<h3 class="font-semibold text-lg text-brand-black mb-1.5">ConnectQ</h3>
+<p class="text-xs text-brand-muted leading-relaxed mb-6">The integration and data-mesh layer — linking ERPs, banks, and operational systems so every IntellQ module shares the same live, consistent substrate.</p>
+</div>
+<div class="pt-3 border-t border-black/[0.05] flex items-center justify-between font-mono text-[11px] text-brand-muted">
+<span>340+ CONNECTORS</span>
+<span class="font-medium text-brand-black">MOD-08</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 8. Advantage Telemetry Studio Showcase (Auralis Exact Workstation Style) -->
+<section class="max-w-[1280px] mx-auto px-4 sm:px-8 mb-36" id="advantage">
+<div class="flex items-center gap-4 mb-8">
+<span class="rounded-full px-3.5 py-1 text-xs font-semibold bg-black/[0.04] text-brand-black border border-black/[0.06]">
+        Advantage Telemetry
+      </span>
+<div class="h-px bg-black/[0.08] flex-grow"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+<!-- Card 1: Omnichannel Agents -->
+<div class="bg-white rounded-3xl p-6 sm:p-8 border border-surface-border h-auto min-h-[360px] sm:h-[420px] flex flex-col justify-between relative overflow-hidden shadow-sm group" data-aos="fade-up" data-aos-delay="100">
+<div class="absolute inset-0 flex items-center justify-center opacity-40 pointer-events-none">
+<div class="w-56 h-56 rounded-full bg-blue-400/40 blur-3xl absolute -translate-x-12 -translate-y-12"></div>
+<div class="w-56 h-56 rounded-full bg-purple-400/40 blur-3xl absolute translate-x-12 translate-y-12"></div>
+</div>
+<div class="z-10 bg-surface-panel self-start px-4 py-1.5 rounded-full border border-black/[0.06] text-xs font-medium text-brand-black">
+          Omnichannel Runtime
+        </div>
+<div class="z-10 bg-white/70 backdrop-blur-xl p-5 rounded-2xl border border-black/[0.08] shadow-sm">
+<div class="flex items-center gap-3 mb-3">
+<div class="w-8 h-8 rounded-full bg-brand-black text-white flex items-center justify-center text-xs">
+<span class="material-symbols-outlined text-sm">smart_toy</span>
+</div>
+<div class="bg-surface-panel border border-black/[0.06] px-3.5 py-1.5 rounded-xl text-xs text-brand-black">
+              Reconciled 1,480 ledger anomalies across 3 subsidiaries.
+            </div>
+</div>
+<div class="flex items-center gap-3 flex-row-reverse">
+<div class="w-8 h-8 rounded-full bg-zinc-200 text-brand-black flex items-center justify-center text-xs">
+<span class="material-symbols-outlined text-sm">person</span>
+</div>
+<div class="bg-brand-black text-white px-3.5 py-1.5 rounded-xl text-xs">
+              Confirm zero manual intervention and lock audit trail.
+            </div>
+</div>
+</div>
+</div>
+<!-- Card 2: Analytics & Insight -->
+<div class="bg-white rounded-3xl p-6 sm:p-8 border border-surface-border h-auto min-h-[360px] sm:h-[420px] flex flex-col justify-between relative overflow-hidden shadow-sm group" data-aos="fade-up" data-aos-delay="200">
+<div class="absolute inset-0 flex items-end justify-center pb-8 opacity-40 pointer-events-none">
+<div class="flex items-end gap-2 h-36 w-full px-8">
+<div class="w-full bg-zinc-200 rounded-t-lg h-[35%]"></div>
+<div class="w-full bg-zinc-200 rounded-t-lg h-[55%]"></div>
+<div class="w-full bg-indigo-500 rounded-t-lg h-[85%] relative"></div>
+<div class="w-full bg-zinc-200 rounded-t-lg h-[65%]"></div>
+<div class="w-full bg-zinc-200 rounded-t-lg h-[40%]"></div>
+</div>
+</div>
+<div class="z-10 bg-surface-panel self-start px-4 py-1.5 rounded-full border border-black/[0.06] text-xs font-medium text-brand-black">
+          Autonomous Telemetry
+        </div>
+<div class="z-10 bg-white/80 backdrop-blur-xl p-6 rounded-2xl border border-black/[0.08] shadow-sm">
+<h4 class="font-semibold text-base text-brand-black mb-1">Deep Diagnostic Precision</h4>
+<p class="text-xs text-brand-muted leading-relaxed">Continuous algorithmic monitoring across 340+ SaaS endpoints with sub-2ms synchronization drift.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 9. Roadmap: 4-Phase Trajectory (Clean Horizontal Cards) -->
+<section class="max-w-[1280px] mx-auto px-4 sm:px-8 mb-36" id="roadmap">
+<div class="flex items-center gap-4 mb-6">
+<span class="rounded-full px-3.5 py-1 text-xs font-semibold bg-black/[0.04] text-brand-black border border-black/[0.06]">
+        Go-To-Market
+      </span>
+<div class="h-px bg-black/[0.08] flex-grow"></div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-14">
+<div class="lg:col-span-7">
+<h2 class="font-semibold text-3xl sm:text-5xl text-brand-black tracking-tight leading-tight" data-aos="fade-up">
+          From service businesses to autonomous enterprise.
+        </h2>
+</div>
+<div class="lg:col-span-5 flex items-end">
+<p class="text-base text-brand-muted leading-relaxed" data-aos="fade-up" data-aos-delay="100">
+          A structured, incremental journey designed to deliver cash-flow impact in weeks, expanding systematically into full autonomous operations.
+        </p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Phase 1 -->
+<div class="bg-white rounded-2xl p-6 border border-black/[0.06] shadow-sm card-lift flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
+<div>
+<div class="flex items-center justify-between mb-5">
+<span class="w-9 h-9 rounded-full bg-zinc-100 flex items-center justify-center font-mono text-sm font-bold text-brand-black">01</span>
+<span class="rounded-full px-2.5 py-0.5 font-mono text-[10px] font-semibold bg-zinc-100 text-brand-secondary border border-zinc-200">PHASE 1</span>
+</div>
+<h3 class="font-semibold text-lg text-brand-black mb-2">Service Businesses</h3>
+<p class="text-xs text-brand-muted mb-5 leading-relaxed">Clinics, salons, health studios, and regional service operators seeking immediate operational leverage.</p>
+<div class="space-y-1.5 text-xs text-brand-black font-medium mb-6">
+<div class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-brand-black rounded-full"></span>SmartTime Scheduling</div>
+<div class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-brand-black rounded-full"></span>BookMyQ Omnichannel</div>
+<div class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-brand-black rounded-full"></span>ReconQ Automated Ledger</div>
+</div>
+</div>
+<div class="pt-3 border-t border-black/[0.05] font-mono text-[11px] text-brand-muted flex justify-between">
+<span>DEPLOYMENT</span>
+<span class="font-semibold text-brand-black">IMMEDIATE</span>
+</div>
+</div>
+<!-- Phase 2 -->
+<div class="bg-white rounded-2xl p-6 border border-black/[0.06] shadow-sm card-lift flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
+<div>
+<div class="flex items-center justify-between mb-5">
+<span class="w-9 h-9 rounded-full bg-zinc-100 flex items-center justify-center font-mono text-sm font-bold text-brand-black">02</span>
+<span class="rounded-full px-2.5 py-0.5 font-mono text-[10px] font-semibold bg-zinc-100 text-brand-secondary border border-zinc-200">PHASE 2</span>
+</div>
+<h3 class="font-semibold text-lg text-brand-black mb-2">Mid-Market Expansion</h3>
+<p class="text-xs text-brand-muted mb-5 leading-relaxed">Multi-location operators, regional retail chains, and rapidly expanding franchise networks.</p>
+<div class="space-y-1.5 text-xs text-brand-black font-medium mb-6">
+<div class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-brand-black rounded-full"></span>InsightQ Analytics</div>
+<div class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-brand-black rounded-full"></span>AssistQ Copilot</div>
+<div class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-brand-black rounded-full"></span>Cross-Unit Reporting</div>
+</div>
+</div>
+<div class="pt-3 border-t border-black/[0.05] font-mono text-[11px] text-brand-muted flex justify-between">
+<span>SCALE</span>
+<span class="font-semibold text-brand-black">MULTI-UNIT</span>
+</div>
+</div>
+<!-- Phase 3 -->
+<div class="bg-white rounded-2xl p-6 border border-black/[0.06] shadow-sm card-lift flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
+<div>
+<div class="flex items-center justify-between mb-5">
+<span class="w-9 h-9 rounded-full bg-zinc-100 flex items-center justify-center font-mono text-sm font-bold text-brand-black">03</span>
+<span class="rounded-full px-2.5 py-0.5 font-mono text-[10px] font-semibold bg-zinc-100 text-brand-secondary border border-zinc-200">PHASE 3</span>
+</div>
+<h3 class="font-semibold text-lg text-brand-black mb-2">Large Enterprise</h3>
+<p class="text-xs text-brand-muted mb-5 leading-relaxed">Global organizations running legacy infrastructure looking for full OS consolidation.</p>
+<div class="space-y-1.5 text-xs text-brand-black font-medium mb-6">
+<div class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-brand-black rounded-full"></span>Full Enterprise OS</div>
+<div class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-brand-black rounded-full"></span>ConnectQ Data Mesh</div>
+<div class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-brand-black rounded-full"></span>Air-Gapped Enclaves</div>
+</div>
+</div>
+<div class="pt-3 border-t border-black/[0.05] font-mono text-[11px] text-brand-muted flex justify-between">
+<span>GOVERNANCE</span>
+<span class="font-semibold text-brand-black">ENTERPRISE</span>
+</div>
+</div>
+<!-- Phase 4 -->
+<div class="bg-white rounded-2xl p-6 border border-black/[0.06] shadow-sm card-lift flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
+<div>
+<div class="flex items-center justify-between mb-5">
+<span class="w-9 h-9 rounded-full bg-zinc-100 flex items-center justify-center font-mono text-sm font-bold text-brand-black">04</span>
+<span class="rounded-full px-2.5 py-0.5 font-mono text-[10px] font-semibold bg-zinc-100 text-brand-secondary border border-zinc-200">PHASE 4</span>
+</div>
+<h3 class="font-semibold text-lg text-brand-black mb-2">Autonomous Ops</h3>
+<p class="text-xs text-brand-muted mb-5 leading-relaxed">Self-governing enterprise infrastructure commanded by autonomous agent swarms.</p>
+<div class="space-y-1.5 text-xs text-brand-black font-medium mb-6">
+<div class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-brand-black rounded-full"></span>AgentQ Swarm Ops</div>
+<div class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-brand-black rounded-full"></span>Self-Healing Workflows</div>
+<div class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-brand-black rounded-full"></span>Automated Margins</div>
+</div>
+</div>
+<div class="pt-3 border-t border-black/[0.05] font-mono text-[11px] text-brand-muted flex justify-between">
+<span>ORCHESTRATION</span>
+<span class="font-semibold text-brand-black">AUTONOMOUS</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 10. Centerpiece Vision Quote (Auralis Typography Centerpiece) -->
+<section class="max-w-[1280px] mx-auto px-4 sm:px-8 mb-36 text-center">
+<div class="max-w-4xl mx-auto py-12 sm:py-16 px-4 sm:px-6 relative">
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<div class="w-96 h-96 rounded-full bg-indigo-500/10 blur-[100px]"></div>
+</div>
+<span class="font-mono text-xs uppercase tracking-[0.25em] text-brand-muted mb-8 inline-block" data-aos="fade-up">— THE INTELLQ THESIS —</span>
+<blockquote class="text-2xl sm:text-5xl lg:text-6xl text-brand-black font-semibold mb-8 leading-[1.15] tracking-tight" data-aos="fade-up" data-aos-delay="100">
+        “The future is not more software. <br class="hidden sm:inline"/>
+        The future is <span class="italic font-serif">Enterprise Intelligence</span>.”
+      </blockquote>
+<p class="text-base sm:text-lg text-brand-muted max-w-2xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="200">
+        IntellQ connects knowledge, automates decisions, and enables autonomous enterprises. We free human talent from mundane software upkeep so leadership can focus on strategy, taste, and creation.
+      </p>
+</div>
+</section>
+<!-- 11. Contact Section & Enterprise Demo Request Form -->
+<section class="max-w-[1280px] mx-auto px-4 sm:px-8 mb-28" id="contact">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-5 flex flex-col justify-between" data-aos="fade-up">
+<div>
+<div class="inline-flex items-center gap-2 mb-3">
+<span class="w-1.5 h-1.5 bg-brand-black rounded-full"></span>
+<span class="font-mono text-xs uppercase tracking-widest text-brand-muted font-semibold">Get In Touch</span>
+</div>
+<h2 class="font-semibold text-3xl sm:text-4xl text-brand-black mb-4 tracking-tight leading-snug">
+            Ready to run your enterprise on one intelligence layer?
+          </h2>
+<p class="text-sm sm:text-base text-brand-muted mb-8 leading-relaxed">
+            Schedule an architectural deep dive with our founding systems team. We will evaluate your current software stack and map out an autonomous agent roadmap.
+          </p>
+<div class="space-y-4">
+<div class="flex items-center gap-4">
+<span class="w-10 h-10 rounded-full bg-white border border-black/[0.08] flex items-center justify-center text-brand-black shadow-sm">
+<span class="material-symbols-outlined text-lg">alternate_email</span>
+</span>
+<div>
+<span class="font-mono text-[10px] text-brand-muted uppercase tracking-widest block">Direct Dispatch</span>
+<p class="text-xs sm:text-sm text-brand-black font-medium">team@intellq.ai</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<span class="w-10 h-10 rounded-full bg-white border border-black/[0.08] flex items-center justify-center text-brand-black shadow-sm">
+<span class="material-symbols-outlined text-lg">domain</span>
+</span>
+<div>
+<span class="font-mono text-[10px] text-brand-muted uppercase tracking-widest block">HQ &amp; Labs</span>
+<p class="text-xs sm:text-sm text-brand-black font-medium">AvariQ Systems, San Francisco • London</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<span class="w-10 h-10 rounded-full bg-white border border-black/[0.08] flex items-center justify-center text-brand-black shadow-sm">
+<span class="material-symbols-outlined text-lg">security</span>
+</span>
+<div>
+<span class="font-mono text-[10px] text-brand-muted uppercase tracking-widest block">Compliance</span>
+<p class="text-xs sm:text-sm text-brand-black font-medium">ISO-27001, SOC-2 Type II, HIPAA Ready</p>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-8 mt-8 border-t border-black/[0.06] font-mono text-[11px] text-brand-muted">
+          SECURE DISPATCH NODE • ENCRYPTED VIA TLS 1.3
+        </div>
+</div>
+<div class="lg:col-span-7" data-aos="fade-up" data-aos-delay="100">
+<div class="bg-white rounded-3xl p-6 sm:p-10 border border-black/[0.06] shadow-[0_4px_24px_rgba(0,0,0,0.03)]">
+<form class="space-y-5" onsubmit="event.preventDefault(); submitDemoForm(this);">
+<input type="text" name="_gotcha" style="display:none !important" tabindex="-1" autocomplete="off"/>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+<div class="space-y-1.5">
+<label class="text-xs font-medium text-brand-secondary" for="full_name">Full Name</label>
+<input class="w-full bg-surface-panel border border-black/[0.08] focus:border-brand-black focus:ring-0 text-brand-black px-4 py-3 text-sm rounded-xl transition-colors placeholder:text-brand-muted/60" id="full_name" name="full_name" placeholder="Elena Rostova" required="" type="text"/>
+</div>
+<div class="space-y-1.5">
+<label class="text-xs font-medium text-brand-secondary" for="work_email">Work Email</label>
+<input class="w-full bg-surface-panel border border-black/[0.08] focus:border-brand-black focus:ring-0 text-brand-black px-4 py-3 text-sm rounded-xl transition-colors placeholder:text-brand-muted/60" id="work_email" name="email" placeholder="elena@enterprise.io" required="" type="email"/>
+</div>
+</div>
+<div class="space-y-1.5">
+<label class="text-xs font-medium text-brand-secondary" for="company_name">Company / Organization</label>
+<input class="w-full bg-surface-panel border border-black/[0.08] focus:border-brand-black focus:ring-0 text-brand-black px-4 py-3 text-sm rounded-xl transition-colors placeholder:text-brand-muted/60" id="company_name" name="company" placeholder="Acro Logistics Corp" required="" type="text"/>
+</div>
+<div class="space-y-1.5">
+<label class="text-xs font-medium text-brand-secondary" for="use_case">What are you looking to solve?</label>
+<textarea class="w-full bg-surface-panel border border-black/[0.08] focus:border-brand-black focus:ring-0 text-brand-black px-4 py-3 text-sm rounded-xl transition-colors placeholder:text-brand-muted/60 resize-none" id="use_case" name="message" placeholder="We manage 45 clinic locations and want to automate patient scheduling, banking reconciliation, and enterprise ledger syncing..." required="" rows="4"></textarea>
+</div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-2">
+<div class="flex items-center gap-2">
+<input checked="" class="w-4 h-4 rounded text-brand-black focus:ring-0 border-black/20 cursor-pointer" id="nda_consent" name="nda" type="checkbox"/>
+<label class="text-xs text-brand-muted cursor-pointer" for="nda_consent">Require mutual standard NDA</label>
+</div>
+<button class="rounded-full px-8 py-3.5 text-sm font-medium text-white bg-brand-black hover:bg-black/85 transition-all shadow-sm flex items-center justify-center gap-2 cursor-pointer active:scale-98" id="submit-btn" type="submit">
+<span>Request a Demo</span>
+<span class="material-symbols-outlined text-[17px]">arrow_forward</span>
+</button>
+</div>
+<div class="hidden p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs text-center font-medium mt-3" id="form-success-msg">
+              ✓ Transmission confirmed. An IntellQ enterprise solutions engineer will respond within 4 hours.
+            </div>
+<div class="hidden p-4 rounded-xl bg-rose-50 border border-rose-200 text-rose-800 text-xs text-center font-medium mt-3" id="form-error-msg">
+              Something went wrong. Please try again or email team@intellq.ai.
+            </div>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- 12. Footer (Auralis Minimal Clean Borderless) -->
+<footer class="w-full border-t border-black/[0.08] py-12 bg-transparent mt-auto">
+<div class="max-w-[1280px] mx-auto px-4 sm:px-8 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex flex-col sm:flex-row items-center gap-2 sm:gap-6 text-center sm:text-left">
+<span class="text-lg font-bold tracking-tight text-brand-black">IntellQ</span>
+<span class="text-sm text-brand-muted">© 2024 IntellQ AI. Engineered for precision.</span>
+</div>
+<div class="flex flex-wrap items-center justify-center gap-6">
+<a class="text-sm text-brand-muted hover:text-brand-black transition-colors" href="#">Twitter</a>
+<a class="text-sm text-brand-muted hover:text-brand-black transition-colors" href="#">LinkedIn</a>
+<a class="text-sm text-brand-muted hover:text-brand-black transition-colors" href="#">GitHub</a>
+<a class="text-sm text-brand-muted hover:text-brand-black transition-colors" href="terms.html">Terms</a>
+<a class="text-sm text-brand-muted hover:text-brand-black transition-colors" href="privacy.html">Privacy</a>
+</div>
+</div>
+</footer>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js" integrity="sha384-n1AULnKdMJlK1oQCLNDL9qZsDgXtH6jRYFCpBtWFc+a9Yve0KSoMn575rk755NJZ" crossorigin="anonymous"></script>
+<script src="assets/js/main.js" defer></script>
+</body></html>
